@@ -34,42 +34,42 @@
         android:layout_marginRight="10dp" />
 
     <ImageButton
-        android:layout_width="68dp"
-        android:layout_height="56dp"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
         android:id="@+id/villagerImage"
         android:layout_gravity="left|top"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
         android:paddingRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:src="@assets/villager.jpg" />
+        android:layout_marginLeft="7dp" />
 
     <ImageButton
-        android:layout_width="68dp"
-        android:layout_height="56dp"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
         android:id="@+id/hunterImage"
         android:layout_gravity="right|top"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
         android:paddingLeft="30dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="7dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a charactor to play"
+        android:text="Choose a charactor"
         android:id="@+id/textView2"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="50dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
         android:text="Create"
         android:id="@+id/createButton"
         android:layout_gravity="left|top"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="9dp" />
+        android:layout_marginLeft="30dp"
+        android:textSize="14dp"
+        android:textColor="#40362c" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,22 +84,24 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
         android:text="Play"
         android:id="@+id/playButton"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="100dp"
-        android:textSize="9dp" />
+        android:textSize="14dp"
+        android:textColor="#40362c" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
         android:text="Delete"
         android:id="@+id/deleteButton"
         android:layout_gravity="center_horizontal|right|top"
         android:layout_marginTop="100dp"
-        android:textSize="9dp"
-        android:layout_marginRight="50dp" />
+        android:textSize="14dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#40362c" />
 </FrameLayout>

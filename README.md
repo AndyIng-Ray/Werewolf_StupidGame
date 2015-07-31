@@ -1,3 +1,3 @@
 # Werewolf_StupidGame
-Only4HoursEx4
+Made by Only4Hours
 

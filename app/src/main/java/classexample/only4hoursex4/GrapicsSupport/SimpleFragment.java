@@ -131,8 +131,8 @@ public class SimpleFragment extends Fragment implements
     }
 
     private void setUpGUI() {
-        mVGButt.setImageBitmap(mVGBitmap);
-        mHTButt.setImageBitmap(mHTBitmap);
+        //mVGButt.setImageBitmap(mVGBitmap);
+        //mHTButt.setImageBitmap(mHTBitmap);
 
         mVGButt.setOnClickListener(
                 new View.OnClickListener() {

@@ -40,7 +40,7 @@ public class Model {
     }
     private void updateListener() {
         if (null != mModelChangeCallback)
-            mModelChangeCallback.onModelChange();
+            mModelChangeCallback.onModelChange(mAllHunters.size() + mAllVillagers.size());
     }
 
     public Model(Bitmap wereWolf, Bitmap villager, Bitmap hunter) {

@@ -40,7 +40,8 @@
         android:layout_gravity="left|top"
         android:layout_marginTop="15dp"
         android:paddingRight="15dp"
-        android:layout_marginLeft="7dp" />
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/villager" />
 
     <ImageButton
         android:layout_width="81dp"
@@ -48,8 +49,9 @@
         android:id="@+id/hunterImage"
         android:layout_gravity="right|top"
         android:layout_marginTop="15dp"
-        android:paddingLeft="30dp"
-        android:layout_marginRight="7dp" />
+        android:paddingLeft="15dp"
+        android:layout_marginRight="7dp"
+        android:src="@drawable/hunter" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,7 +68,7 @@
         android:text="Create"
         android:id="@+id/createButton"
         android:layout_gravity="left|top"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="110dp"
         android:layout_marginLeft="30dp"
         android:textSize="14dp"
         android:textColor="#40362c" />
@@ -89,7 +91,7 @@
         android:text="Play"
         android:id="@+id/playButton"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="110dp"
         android:textSize="14dp"
         android:textColor="#40362c" />
 
@@ -100,7 +102,7 @@
         android:text="Delete"
         android:id="@+id/deleteButton"
         android:layout_gravity="center_horizontal|right|top"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="110dp"
         android:textSize="14dp"
         android:layout_marginRight="30dp"
         android:textColor="#40362c" />

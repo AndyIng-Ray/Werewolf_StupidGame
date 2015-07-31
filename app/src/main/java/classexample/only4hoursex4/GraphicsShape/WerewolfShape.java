@@ -14,6 +14,8 @@ public class WerewolfShape extends BitmapShape {
     static public final int kCollideTop = 0x4;
     static public final int kCollideBottom = 0x8;
 
+    final float kSlowDown = 0.8f;
+
     public WerewolfShape(Bitmap b, int atX, int atY, int w, int h) {
         super(b, atX, atY, w, h);
     }
@@ -60,12 +62,12 @@ public class WerewolfShape extends BitmapShape {
     }
 
     private void flipVX() {
-        float vx = -getVelocityX();
+        float vx = -getVelocityX() * kSlowDown;
         setVelocityX(vx);
     }
 
     private void flipVY() {
-        float vy = -getVelocityY();
+        float vy = -getVelocityY() * kSlowDown;
         setVelocityY(vy);
     }
 

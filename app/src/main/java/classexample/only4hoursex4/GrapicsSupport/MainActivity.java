@@ -1,5 +1,6 @@
 package classexample.only4hoursex4.GrapicsSupport;
 
+import android.app.Activity;
 import android.hardware.SensorEventListener;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,8 +9,9 @@ import android.view.MenuItem;
 
 import classexample.only4hoursex4.R;
 
-
-public class MainActivity extends ActionBarActivity {
+//试试看改下代码再push 顺便把mainactivity的extends ActionBarActivity 改成了extends Activity
+//上面的bar不见了 应该没事吧
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

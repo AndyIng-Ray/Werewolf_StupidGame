@@ -152,4 +152,24 @@ public class Model {
     public void setWorldDimension(int w, int h) {
         mWorldBound = new Rect(0, 0, w, h);
     }
+
+    public boolean getIsNight() {
+        return isNight;
+    }
+
+    public void setCreate() {
+        isCreate = true;
+    }
+
+    public void setDelete() {
+        isCreate = false;
+    }
+
+    public void setVG() {
+        isVillage = true;
+    }
+
+    public void setHT() {
+        isVillage = false;
+    }
 }

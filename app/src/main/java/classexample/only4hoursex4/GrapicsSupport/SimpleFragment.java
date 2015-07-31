@@ -115,6 +115,8 @@ public class SimpleFragment extends Fragment implements
         // setup Accelerometer
         setupAccelerometer();
 
+        setUpGUI();
+
         return rootView;
     }
 
@@ -124,8 +126,51 @@ public class SimpleFragment extends Fragment implements
         mCreateButt = (Button) rootView.findViewById(R.id.createButton);
         mDeleteButt = (Button) rootView.findViewById(R.id.deleteButton);
         mPlayButt = (Button) rootView.findViewById(R.id.playButton);
-        mVGButt = (ImageButton) rootView.findViewById(R.id.imageButton);
-        mHTButt = (ImageButton) rootView.findViewById(R.id.imageButton2);
+        mVGButt = (ImageButton) rootView.findViewById(R.id.villagerImage);
+        mHTButt = (ImageButton) rootView.findViewById(R.id.hunterImage);
+    }
+
+    private void setUpGUI() {
+        mVGButt.setImageBitmap(mVGBitmap);
+        mHTButt.setImageBitmap(mHTBitmap);
+
+        mVGButt.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mGame.setVG();
+                    }
+                }
+        );
+
+        mHTButt.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mGame.setHT();
+                    }
+                }
+        );
+
+        mCreateButt.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mGame.setCreate();
+                        mMode.setText("Mode: Create");
+                    }
+                }
+        );
+
+        mDeleteButt.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mGame.setDelete();
+                        mMode.setText("Mode: Delete");
+                    }
+                }
+        );
     }
 
     private void setupAccelerometer() {
@@ -136,10 +181,17 @@ public class SimpleFragment extends Fragment implements
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        enableAccelerometer(mGame.getIsNight());
                         mGame.CloseEyes();
                     }
                 }
         );
+    }
+
+    public void setBitMaps(Bitmap wwBit, Bitmap vgBit, Bitmap htBit) {
+        mWWBitmap = wwBit;
+        mVGBitmap = vgBit;
+        mHTBitmap = htBit;
     }
 
     private void enableAccelerometer(boolean enabled) {
@@ -185,6 +237,11 @@ public class SimpleFragment extends Fragment implements
 
     }
 
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        public void onFragmentInteraction(Uri uri);
+    }
+
 //    // TODO: Rename method, update argument and hook method into UI event
 //    public void onButtonPressed(Uri uri) {
 //        if (mListener != null) {
@@ -219,9 +276,5 @@ public class SimpleFragment extends Fragment implements
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-//    public interface OnFragmentInteractionListener {
-//        // TODO: Update argument type and name
-//        public void onFragmentInteraction(Uri uri);
-//    }
 
 }

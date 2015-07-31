@@ -40,8 +40,7 @@
         android:layout_gravity="left|top"
         android:layout_marginTop="15dp"
         android:paddingRight="15dp"
-        android:layout_marginLeft="7dp"
-        android:src="@drawable/villager" />
+        android:layout_marginLeft="7dp" />
 
     <ImageButton
         android:layout_width="81dp"
@@ -50,8 +49,7 @@
         android:layout_gravity="right|top"
         android:layout_marginTop="15dp"
         android:paddingLeft="15dp"
-        android:layout_marginRight="7dp"
-        android:src="@drawable/hunter" />
+        android:layout_marginRight="7dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -106,4 +104,11 @@
         android:textSize="14dp"
         android:layout_marginRight="30dp"
         android:textColor="#40362c" />
+
+    <view
+        android:layout_width="226dp"
+        android:layout_height="181dp"
+        class="classexample.only4hoursex4.GrapicsSupport.DrawArea"
+        android:id="@+id/DrawArea"
+        android:layout_gravity="center" />
 </FrameLayout>

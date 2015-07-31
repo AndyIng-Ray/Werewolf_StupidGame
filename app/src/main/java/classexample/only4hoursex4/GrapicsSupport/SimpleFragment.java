@@ -128,6 +128,7 @@ public class SimpleFragment extends Fragment implements
         mPlayButt = (Button) rootView.findViewById(R.id.playButton);
         mVGButt = (ImageButton) rootView.findViewById(R.id.villagerImage);
         mHTButt = (ImageButton) rootView.findViewById(R.id.hunterImage);
+        mDrawArea = (DrawArea) rootView.findViewById(R.id.DrawArea);
     }
 
     private void setUpGUI() {

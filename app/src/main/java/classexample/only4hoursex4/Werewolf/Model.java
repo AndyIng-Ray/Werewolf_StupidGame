@@ -55,13 +55,24 @@ public class Model {
         mWorldBound = new Rect(0, 0, kDefaultWorldSize, kDefaultWorldSize);
     }
 
+    public void CloseEyes() {
+        if (isNight == true) {
+            isNight = false;
+        }
+        else {
+            isNight = true;
+            if (mWerewolf == null)
+                mWerewolf = new WerewolfShape(mWWmap, 0, 0, kShapeSize, kShapeSize);
+        }
+    }
+
     public void touchHere(float x, float y) {
         if (isCreate == true) {
             if (isVillage == true) {
-                mAllVillagers.add(new VillagerShape());
+                mAllVillagers.add(new VillagerShape(mVGmap, (int)x, (int)y, kShapeSize, kShapeSize));
             }
             else {
-                mAllHunters.add(new HunterShape());
+                mAllHunters.add(new HunterShape(mHTmap, (int)x, (int)y, kShapeSize, kShapeSize));
             }
         }
         else {
@@ -84,7 +95,7 @@ public class Model {
     }
 
     public void setWWVelocity(float vx, float vy) {
-        if (null == mWerewolf)
+        if (null == mWerewolf || isNight == false)
             return;
 
         float size = (float) Math.sqrt(vx*vx + vy*vy);
@@ -103,7 +114,7 @@ public class Model {
     }
 
     public void draw(Canvas c) {
-        if (isNight == true)
+        if (null != mWerewolf)
             mWerewolf.draw(c);
 
         for (int i = 0; i < mAllVillagers.size(); i++)
@@ -113,7 +124,7 @@ public class Model {
     }
 
     public void updateMode(float ax, float ay) {
-        if (null != mWerewolf) {
+        if (null != mWerewolf && isNight == true) {
             mWerewolf.updateVelocity(ax, ay);
             mWerewolf.updateShapeWithVelocity();
             mWerewolf.responseToWorldCollision(mWorldBound);

@@ -3,7 +3,102 @@
     android:layout_height="match_parent" tools:context="classexample.only4hoursex4.GrapicsSupport.SimpleFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WereWolf Killer"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="25dp"
+        android:textColor="#504031"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="count=0"
+        android:id="@+id/count"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode: Create"
+        android:id="@+id/mode"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp" />
+
+    <ImageButton
+        android:layout_width="68dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageButton"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="45dp"
+        android:paddingRight="15dp"
+        android:layout_marginLeft="15dp" />
+
+    <ImageButton
+        android:layout_width="68dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageButton2"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="45dp"
+        android:paddingLeft="30dp"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a charactor to play"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:id="@+id/createButton"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\@Only4Hours"
+        android:id="@+id/textView3"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#40362c"
+        android:textStyle="italic" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/playButton"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="100dp"
+        android:textSize="9dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteButton"
+        android:layout_gravity="center_horizontal|right|top"
+        android:layout_marginTop="100dp"
+        android:textSize="9dp"
+        android:layout_marginRight="50dp" />
 </FrameLayout>

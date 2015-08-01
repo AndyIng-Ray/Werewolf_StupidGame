@@ -182,8 +182,8 @@ public class SimpleFragment extends Fragment implements
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        enableAccelerometer(mGame.getIsNight());
                         mGame.CloseEyes();
+                        enableAccelerometer(mGame.getIsNight());
                     }
                 }
         );
@@ -230,7 +230,7 @@ public class SimpleFragment extends Fragment implements
         } else {
             mAX = mAY = 0f;
         }
-        mGame.setWWVelocity(mAX, mAY);
+        mGame.setWWVelocity(-mAX, mAY);
     }
 
     @Override

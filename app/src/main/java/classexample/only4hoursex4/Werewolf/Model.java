@@ -62,7 +62,7 @@ public class Model {
         else {
             isNight = true;
             if (mWerewolf == null)
-                mWerewolf = new WerewolfShape(mWWmap, 0, 0, kShapeSize, kShapeSize);
+                mWerewolf = new WerewolfShape(mWWmap, 50, 50, kShapeSize, kShapeSize);
         }
     }
 
@@ -100,7 +100,7 @@ public class Model {
 
         float size = (float) Math.sqrt(vx*vx + vy*vy);
 
-        float factor = size / (40 * 10);
+        float factor = size / ( 1);
 
         if (size < Float.MIN_VALUE) {
             vx = 0f;
@@ -123,9 +123,11 @@ public class Model {
             mAllHunters.get(i).draw(c);
     }
 
+    final float kAccelScale = 0.5f;
+
     public void updateMode(float ax, float ay) {
         if (null != mWerewolf && isNight == true) {
-            mWerewolf.updateVelocity(ax, ay);
+            mWerewolf.updateVelocity(kAccelScale * ax, kAccelScale * ay);
             mWerewolf.updateShapeWithVelocity();
             mWerewolf.responseToWorldCollision(mWorldBound);
 

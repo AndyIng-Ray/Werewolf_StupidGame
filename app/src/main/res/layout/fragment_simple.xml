@@ -39,9 +39,9 @@
         android:id="@+id/villagerImage"
         android:layout_gravity="left|top"
         android:layout_marginTop="15dp"
-        android:paddingRight="15dp"
         android:layout_marginLeft="7dp"
-        android:src="@drawable/villager" />
+        android:src="@drawable/villager"
+        android:background="#80766c" />
 
     <ImageButton
         android:layout_width="81dp"
@@ -49,9 +49,9 @@
         android:id="@+id/hunterImage"
         android:layout_gravity="right|top"
         android:layout_marginTop="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginRight="7dp"
-        android:src="@drawable/hunter" />
+        android:src="@drawable/hunter"
+        android:background="#dcdcdc" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -139,6 +139,8 @@ public class SimpleFragment extends Fragment implements
                     @Override
                     public void onClick(View v) {
                         mGame.setVG();
+                        mVGButt.setBackgroundColor(0xff80766c);
+                        mHTButt.setBackgroundColor(0xffdcdcdc);
                     }
                 }
         );
@@ -148,6 +150,8 @@ public class SimpleFragment extends Fragment implements
                     @Override
                     public void onClick(View v) {
                         mGame.setHT();
+                        mHTButt.setBackgroundColor(0xff80766c);
+                        mVGButt.setBackgroundColor(0xffdcdcdc);
                     }
                 }
         );

@@ -34,8 +34,8 @@ public class Model {
     boolean isVillage = true;
     boolean isNight = false;
 
-    OnModelChangeListenr mModelChangeCallback = null;
-    public void setOnModelChangeListener(OnModelChangeListenr listener) {
+    OnModelChangeListener mModelChangeCallback = null;
+    public void setOnModelChangeListener(OnModelChangeListener listener) {
         mModelChangeCallback = listener;
     }
     private void updateListener() {

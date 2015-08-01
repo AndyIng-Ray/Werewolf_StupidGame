@@ -1,8 +1,6 @@
 package classexample.only4hoursex4.GrapicsSupport;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,13 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import classexample.only4hoursex4.R;
 import classexample.only4hoursex4.Werewolf.Model;
-import classexample.only4hoursex4.Werewolf.OnModelChangeListenr;
+import classexample.only4hoursex4.Werewolf.OnModelChangeListener;
 
 
 /**
@@ -32,7 +29,7 @@ import classexample.only4hoursex4.Werewolf.OnModelChangeListenr;
  * create an instance of this fragment.
  */
 public class SimpleFragment extends Fragment implements
-        OnMyTimerAlarmListener, OnModelChangeListenr, SensorEventListener {
+        OnMyTimerAlarmListener, OnModelChangeListener, SensorEventListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -55,6 +52,7 @@ public class SimpleFragment extends Fragment implements
 
     Model mGame;
     float mAX, mAY;
+    float mVX = 0, mVY = 0;
 
     int mCountInt = 0;
 
@@ -240,6 +238,8 @@ public class SimpleFragment extends Fragment implements
         } else {
             mAX = mAY = 0f;
         }
+        //mVX -= -mAX;
+        //mVY += mAY;
         mGame.setWWVelocity(-mAX, mAY);
     }
 

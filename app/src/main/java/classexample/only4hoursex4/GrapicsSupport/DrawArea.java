@@ -40,6 +40,7 @@ public class DrawArea extends SurfaceView implements SurfaceHolder.Callback, Vie
         mDrawSurface = getHolder();
         // enable the calling of SurfaceHolder.Callback functions!
         mDrawSurface.addCallback(this);
+        setOnTouchListener(this);
     }
 
     void setModel(Model m) { mGame = m; }
@@ -77,6 +78,8 @@ public class DrawArea extends SurfaceView implements SurfaceHolder.Callback, Vie
             case MotionEvent.ACTION_DOWN:
                 touchX = event.getX();
                 touchY = event.getY();
+
+                Log.d("MyTouch", touchX + " " + touchY);
                 mGame.touchHere(touchX, touchY);
                 break;
             case MotionEvent.ACTION_MOVE:

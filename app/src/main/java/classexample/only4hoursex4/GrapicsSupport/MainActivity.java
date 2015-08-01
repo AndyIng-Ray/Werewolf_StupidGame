@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements SimpleFragment.OnFragmentI
 
         mSimpleFragment = new SimpleFragment();
 
-        String wwName = "werewolf.jpg";
+        String wwName = "werewolf.png";
         String vgName = "villager.jpg";
         String htName = "hunter.jpg";
 

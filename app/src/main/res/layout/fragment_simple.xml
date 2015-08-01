@@ -108,11 +108,14 @@
         android:textColor="#40362c" />
 
     <view
-        android:layout_width="322dp"
-        android:layout_height="371dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         class="classexample.only4hoursex4.GrapicsSupport.DrawArea"
         android:id="@+id/DrawArea"
         android:layout_gravity="center"
-        android:layout_marginTop="55dp" />
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </FrameLayout>

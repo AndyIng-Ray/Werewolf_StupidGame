@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -72,6 +73,7 @@ public class Model {
         }
         else {
             isNight = true;
+            mTime = 0;
             if (mWerewolf != null) {
                 mWerewolf = null;
             }
@@ -169,8 +171,7 @@ public class Model {
         }
         if (isNight == true)
             mTime += 25;
-        else
-            mTime = 0;
+
         updateListener(); //  with number of ducks on screen
     }
 
@@ -180,6 +181,10 @@ public class Model {
 
     public boolean getIsNight() {
         return isNight;
+    }
+
+    public int getTime() {
+        return mTime;
     }
 
     public void setCreate() {

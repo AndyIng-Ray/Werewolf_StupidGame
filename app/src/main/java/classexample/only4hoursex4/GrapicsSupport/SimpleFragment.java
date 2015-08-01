@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 import classexample.only4hoursex4.R;
 import classexample.only4hoursex4.Werewolf.Model;
@@ -218,6 +221,9 @@ public class SimpleFragment extends Fragment implements
         mCountInt = count;
         mCount.setText("count=" + mCountInt);
         if (mCountInt == 0 && mGame.getIsNight() == true) {
+            DecimalFormat decimalFormat = new DecimalFormat(".0");//构造方法的字符格式这里如果小数不足2位,会以0补足.
+            String p = decimalFormat.format(mGame.getTime() / 1000.0);
+            Toast.makeText(getActivity(), "Villagers aced in " + p + " seconds!", Toast.LENGTH_SHORT).show();
             mGame.CloseEyes();
             mGame.clearModel();
             enableAccelerometer(mGame.getIsNight());

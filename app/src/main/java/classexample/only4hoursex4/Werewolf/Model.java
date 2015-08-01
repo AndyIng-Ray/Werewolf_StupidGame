@@ -16,7 +16,7 @@ import classexample.only4hoursex4.GraphicsShape.WerewolfShape;
  * Created by andying on 7/31/15.
  */
 public class Model {
-    final int kShapeSize = 100;
+    final int kShapeSize = 50;
     final int kDefaultWorldSize = 200;
 
     Rect mWorldBound;
@@ -64,7 +64,7 @@ public class Model {
             if (mWerewolf != null) {
                 mWerewolf = null;
             }
-            mWerewolf = new WerewolfShape(mWWmap, kDefaultWorldSize / 2, kDefaultWorldSize / 2, kShapeSize, kShapeSize);
+            mWerewolf = new WerewolfShape(mWWmap, 325, 350, kShapeSize, kShapeSize);
         }
     }
 

@@ -56,6 +56,8 @@ public class SimpleFragment extends Fragment implements
     Model mGame;
     float mAX, mAY;
 
+    int mCountInt = 0;
+
     final int kUpdatePeriod = 25;
     MyTimer mTimer;
 
@@ -182,8 +184,10 @@ public class SimpleFragment extends Fragment implements
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mGame.CloseEyes();
-                        enableAccelerometer(mGame.getIsNight());
+                        if (mCountInt > 0) {
+                            mGame.CloseEyes();
+                            enableAccelerometer(mGame.getIsNight());
+                        }
                     }
                 }
         );
@@ -210,8 +214,9 @@ public class SimpleFragment extends Fragment implements
 
     @Override
     public void onModelChange(int count) {
-        mCount.setText("count=" + count);
-        if (count == 0 && mGame.getIsNight() == true) {
+        mCountInt = count;
+        mCount.setText("count=" + mCountInt);
+        if (mCountInt == 0 && mGame.getIsNight() == true) {
             mGame.CloseEyes();
             mGame.clearModel();
             enableAccelerometer(mGame.getIsNight());

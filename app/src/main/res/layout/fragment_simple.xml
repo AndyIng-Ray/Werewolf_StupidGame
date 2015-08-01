@@ -21,7 +21,7 @@
         android:text="count=0"
         android:id="@+id/count"
         android:layout_gravity="bottom|left"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:text="Mode: Create"
         android:id="@+id/mode"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp" />
 
     <ImageButton
@@ -80,7 +80,7 @@
         android:id="@+id/textView3"
         android:layout_gravity="right|bottom"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:textColor="#40362c"
         android:textStyle="italic" />
 
@@ -109,9 +109,10 @@
 
     <view
         android:layout_width="322dp"
-        android:layout_height="319dp"
+        android:layout_height="371dp"
         class="classexample.only4hoursex4.GrapicsSupport.DrawArea"
         android:id="@+id/DrawArea"
         android:layout_gravity="center"
         android:layout_marginTop="55dp" />
+
 </FrameLayout>

@@ -52,7 +52,6 @@ public class SimpleFragment extends Fragment implements
 
     Model mGame;
     float mAX, mAY;
-    float mVX = 0, mVY = 0;
 
     int mCountInt = 0;
 
@@ -238,9 +237,6 @@ public class SimpleFragment extends Fragment implements
         } else {
             mAX = mAY = 0f;
         }
-        //mVX -= -mAX;
-        //mVY += mAY;
-        mGame.setWWVelocity(-mAX, mAY);
     }
 
     @Override

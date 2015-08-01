@@ -96,24 +96,24 @@ public class Model {
         }
     }
 
-    public void setWWVelocity(float vx, float vy) {
-        if (null == mWerewolf || isNight == false)
-            return;
-
-        float size = (float) Math.sqrt(vx*vx + vy*vy);
-
-        float factor = size / ( 1);
-
-        if (size < Float.MIN_VALUE) {
-            vx = 0f;
-            vy = 0f;
-        } else {
-            vx = factor * vx / size;
-            vy = factor * vy / size;
-        }
-
-        mWerewolf.setVelocity(vx, vy);
-    }
+//    public void setWWVelocity(float vx, float vy) {
+//        if (null == mWerewolf || isNight == false)
+//            return;
+//
+//        float size = (float) Math.sqrt(vx*vx + vy*vy);
+//
+//        float factor = size / ( 1);
+//
+//        if (size < Float.MIN_VALUE) {
+//            vx = 0f;
+//            vy = 0f;
+//        } else {
+//            vx = factor * vx / size;
+//            vy = factor * vy / size;
+//        }
+//
+//        mWerewolf.setVelocity(vx, vy);
+//    }
 
     public void draw(Canvas c) {
         if (null != mWerewolf)
@@ -125,7 +125,7 @@ public class Model {
             mAllHunters.get(i).draw(c);
     }
 
-    final float kAccelScale = 0.5f;
+    final float kAccelScale = 0.05f;
 
     public void updateMode(float ax, float ay) {
         if (null != mWerewolf && isNight == true) {

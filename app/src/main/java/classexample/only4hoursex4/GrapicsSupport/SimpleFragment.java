@@ -223,7 +223,7 @@ public class SimpleFragment extends Fragment implements
         if (mCountInt == 0 && mGame.getIsNight() == true) {
             DecimalFormat decimalFormat = new DecimalFormat(".0");//构造方法的字符格式这里如果小数不足2位,会以0补足.
             String p = decimalFormat.format(mGame.getTime() / 1000.0);
-            Toast.makeText(getActivity(), "Villagers aced in " + p + " seconds!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Villagers aced in " + p + " seconds!", Toast.LENGTH_LONG).show();
             mGame.CloseEyes();
             mGame.clearModel();
             enableAccelerometer(mGame.getIsNight());

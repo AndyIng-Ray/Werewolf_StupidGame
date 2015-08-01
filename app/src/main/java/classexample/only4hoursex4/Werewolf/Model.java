@@ -63,7 +63,7 @@ public class Model {
         mWorldBound = new Rect(5, 5, kDefaultWorldSize - 5, kDefaultWorldSize - 5);
 
         paint = new Paint();
-        paint.setColor(Color.BLACK);
+        paint.setColor(0xff504031);
         paint.setTextSize(35);
     }
 

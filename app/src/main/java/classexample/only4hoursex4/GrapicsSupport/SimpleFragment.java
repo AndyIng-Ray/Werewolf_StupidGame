@@ -211,6 +211,11 @@ public class SimpleFragment extends Fragment implements
     @Override
     public void onModelChange(int count) {
         mCount.setText("count=" + count);
+        if (count == 0 && mGame.getIsNight() == true) {
+            mGame.CloseEyes();
+            mGame.clearModel();
+            enableAccelerometer(mGame.getIsNight());
+        }
     }
 
     @Override

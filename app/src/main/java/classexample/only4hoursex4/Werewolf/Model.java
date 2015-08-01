@@ -61,8 +61,10 @@ public class Model {
         }
         else {
             isNight = true;
-            if (mWerewolf == null)
-                mWerewolf = new WerewolfShape(mWWmap, 50, 50, kShapeSize, kShapeSize);
+            if (mWerewolf != null) {
+                mWerewolf = null;
+            }
+            mWerewolf = new WerewolfShape(mWWmap, kDefaultWorldSize / 2, kDefaultWorldSize / 2, kShapeSize, kShapeSize);
         }
     }
 
@@ -173,5 +175,12 @@ public class Model {
 
     public void setHT() {
         isVillage = false;
+    }
+
+    public void clearModel() {
+        mWerewolf = null;
+        mAllVillagers.clear();
+        mAllHunters.clear();
+        isNight = false;
     }
 }

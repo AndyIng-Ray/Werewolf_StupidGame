@@ -45,8 +45,32 @@ public class WerewolfShape extends BitmapShape {
                 break;
 
             case kCollideRight:
-                moveTo(worldBound.right-getWidth()/2, getY());
+                moveTo(worldBound.right - getWidth() / 2, getY());
                 flipVX();
+                break;
+
+            case kCollideLeft | kCollideTop:
+                moveTo(getWidth() / 2, getHeight()/2);
+                flipVX();
+                flipVY();
+                break;
+
+            case kCollideLeft | kCollideBottom:
+                moveTo(getWidth()/2, worldBound.bottom-getHeight()/2);
+                flipVX();
+                flipVY();
+                break;
+
+            case kCollideRight | kCollideTop:
+                moveTo(worldBound.right-getWidth()/2, getHeight()/2);
+                flipVX();
+                flipVY();
+                break;
+
+            case kCollideRight | kCollideBottom:
+                moveTo(worldBound.right-getWidth()/2, worldBound.bottom-getHeight()/2);
+                flipVX();
+                flipVY();
                 break;
 
             case kOutsideWorldBound:
@@ -84,22 +108,22 @@ public class WerewolfShape extends BitmapShape {
             returnStatus = kInsideWorldBound;
             if (intersect.left == 0) {// this is the left bound
                 returnStatus |= kCollideLeft;	// what is the difference between these two?
-                returnStatus = kCollideLeft;
+                //returnStatus = kCollideLeft;
             }
 
             if (intersect.right == worldBound.right) {
                 returnStatus |= kCollideRight;
-                returnStatus = kCollideRight;
+                //returnStatus = kCollideRight;
             }
 
             if (intersect.top == worldBound.top) {
                 returnStatus |= kCollideTop;
-                returnStatus = kCollideTop;
+                //returnStatus = kCollideTop;
             }
 
             if (intersect.bottom == worldBound.bottom) {
                 returnStatus |= kCollideBottom;
-                returnStatus = kCollideBottom;
+                //returnStatus = kCollideBottom;
             }
         }
         return returnStatus;

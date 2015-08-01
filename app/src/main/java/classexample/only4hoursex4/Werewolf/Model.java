@@ -2,8 +2,11 @@ package classexample.only4hoursex4.Werewolf;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Vector;
 
@@ -21,6 +24,8 @@ public class Model {
 
     Rect mWorldBound;
 
+    Paint paint = null;
+
     // Region: Model state
     List<VillagerShape> mAllVillagers;
     List<HunterShape> mAllHunters;
@@ -33,6 +38,8 @@ public class Model {
     boolean isCreate = true;
     boolean isVillage = true;
     boolean isNight = false;
+
+    int mTime = 0;
 
     OnModelChangeListener mModelChangeCallback = null;
     public void setOnModelChangeListener(OnModelChangeListener listener) {
@@ -53,6 +60,10 @@ public class Model {
 
         mWerewolf = null;
         mWorldBound = new Rect(5, 5, kDefaultWorldSize - 5, kDefaultWorldSize - 5);
+
+        paint = new Paint();
+        paint.setColor(Color.BLACK);
+        paint.setTextSize(35);
     }
 
     public void CloseEyes() {
@@ -123,6 +134,13 @@ public class Model {
             mAllVillagers.get(i).draw(c);
         for (int i = 0; i < mAllHunters.size(); i++)
             mAllHunters.get(i).draw(c);
+
+        if (isNight == true) {
+            DecimalFormat decimalFormat = new DecimalFormat(".0");//构造方法的字符格式这里如果小数不足2位,会以0补足.
+            String p = decimalFormat.format(mTime / 1000.0);
+            String textTime = "Timer: " + p + "s";
+            c.drawText(textTime, 13, 750, paint);
+        }
     }
 
     final float kAccelScale = 0.05f;
@@ -149,7 +167,10 @@ public class Model {
                 }
             }
         }
-
+        if (isNight == true)
+            mTime += 25;
+        else
+            mTime = 0;
         updateListener(); //  with number of ducks on screen
     }
 

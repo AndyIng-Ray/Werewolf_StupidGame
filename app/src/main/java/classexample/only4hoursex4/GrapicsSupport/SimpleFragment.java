@@ -227,7 +227,6 @@ public class SimpleFragment extends Fragment implements
     @Override
     public void onMyTimerAlarm() {
         mGame.updateMode(-mAX, mAY);
-
         // world probably changed, let's redraw
         mDrawArea.invalidate();
     }
